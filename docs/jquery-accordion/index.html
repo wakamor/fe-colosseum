@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryマスターへの道 | アコーディオン編</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <!-- ここカラ綺麗にしたいスクリプト -->
+    <script>
+        $(function() {
+            var area01 = "close";
+            var area02 = "close";
+            var area03 = "close";
+            var area04 = "close";
+            var area05 = "close";
+            var area06 = "close";
+
+            $("section#sec_03 h3.left-under-line.area01").click(function(){
+                $(this).next("section#sec_03 h3.left-under-line.area01 + ul.area-list").slideToggle();
+                if(area01 == "close"){
+                $("section#sec_03 h3.left-under-line.area01").addClass("active");
+                    area01 = "open";
+                }else{
+                $("section#sec_03 h3.left-under-line.area01").removeClass("active");
+                    area01 = "close";
+                }
+            });
+            $("section#sec_03 h3.left-under-line.area02").click(function(){
+                $(this).next("section#sec_03 h3.left-under-line.area02 + ul.area-list").slideToggle();
+                if(area02 == "close"){
+                $("section#sec_03 h3.left-under-line.area02").addClass("active");
+                    area02 = "open";
+                }else{
+                $("section#sec_03 h3.left-under-line.area02").removeClass("active");
+                    area02 = "close";
+                }
+            });
+            $("section#sec_03 h3.left-under-line.area03").click(function(){
+                $(this).next("section#sec_03 h3.left-under-line.area03 + ul.area-list").slideToggle();
+                if(area03 == "close"){
+                $("section#sec_03 h3.left-under-line.area03").addClass("active");
+                    area03 = "open";
+                }else{
+                $("section#sec_03 h3.left-under-line.area03").removeClass("active");
+                    area03 = "close";
+                }
+            });
+            $("section#sec_03 h3.left-under-line.area04").click(function(){
+                $(this).next("section#sec_03 h3.left-under-line.area04 + ul.area-list").slideToggle();
+                if(area04 == "close"){
+                $("section#sec_03 h3.left-under-line.area04").addClass("active");
+                    area04 = "open";
+                }else{
+                $("section#sec_03 h3.left-under-line.area04").removeClass("active");
+                    area04 = "close";
+                }
+            });
+            $("section#sec_03 h3.left-under-line.area05").click(function(){
+                $(this).next("section#sec_03 h3.left-under-line.area05 + ul.area-list").slideToggle();
+                if(area05 == "close"){
+                $("section#sec_03 h3.left-under-line.area05").addClass("active");
+                    area05 = "open";
+                }else{
+                $("section#sec_03 h3.left-under-line.area05").removeClass("active");
+                    area05 = "close";
+                }
+            });
+            $("section#sec_03 h3.left-under-line.area06").click(function(){
+                $(this).next("section#sec_03 h3.left-under-line.area06 + ul.area-list").slideToggle();
+                if(area06 == "close"){
+                $("section#sec_03 h3.left-under-line.area06").addClass("active");
+                    area06 = "open";
+                }else{
+                $("section#sec_03 h3.left-under-line.area06").removeClass("active");
+                    area06 = "close";
+                }
+            });
+        });
+    </script>
+    <!-- ここマデ綺麗にしたいスクリプト -->
+</head>
+<body>
+    <header class="pl-header">
+        <h1>jQueryマスターへの道 | アコーディオン編</h1>
+        <p>アコーディオンをリファクタリングしよう！<br>例えば同じ処理をまとめたり、セレクターの指定をシンプルにすることでパフォーマンスと可読性を高め、長く保守しやすいコードとなであろう。</p>
+    </header>
+
+    <section id="sec_03" class="pl-wrapper">
+        <h2 class="left-line">エリアから探す</h2>
+        <h3 class="left-under-line area01">那覇・本島南部<span></span></h3>
+        <ul class="area-list">
+            <!--那覇-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="那覇">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">那覇</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+            <!--南部（糸満・豊崎・南城）-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="南部（糸満・豊崎・南城）">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">南部（糸満・豊崎・南城）</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <h3 class="left-under-line area02">本島中部<span></span></h3>
+        <ul class="area-list">
+            <!--北谷-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="北谷">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">北谷</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+            <!--宜野湾市・沖縄市・うるま市-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="宜野湾市・沖縄市・うるま市">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">宜野湾市・沖縄市・うるま市</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <h3 class="left-under-line area03">本島北部<span></span></h3>
+        <ul class="area-list">
+            <!--恩納村-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="恩納村">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">恩納村</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+            <!--名護-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="名護">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">名護</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <h3 class="left-under-line area04">八重山諸島<span></span></h3>
+        <ul class="area-list">
+            <!--石垣島-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="石垣島">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">石垣島</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+            <!--西表島-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="西表島">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">西表島</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+            <!--竹富島-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="竹富島">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">竹富島</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+            <!--小浜島-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="小浜島">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">小浜島</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+            <!--波照間島-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="波照間島">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">波照間島</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+            <!--与那国島-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="与那国島">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">与那国島</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <h3 class="left-under-line area05">宮古島<span></span></h3>
+        <ul class="area-list">
+            <!--宮古島-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="宮古島">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">宮古島</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <h3 class="left-under-line area06">本島周辺離島<span></span></h3>
+        <ul class="area-list">
+            <!--久米島-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="久米島">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">久米島</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+            <!--渡嘉敷島-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="渡嘉敷島">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">渡嘉敷島</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+            <!--座間味島-->
+            <li>
+                <a href="http://www.mountaindew.com/">
+                    <p class="flt-left_imgBox"><img src="https://placehold.jp/190x190.png" alt="座間味島">
+                    </p>
+                    <div class="flt-riht_txtBox">
+                        <h3 class="areaName">座間味島</h3>
+                        <p class="areaTxt">ゴーシュは町の活動写真館でセロを弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    
+</body>
+</html>
