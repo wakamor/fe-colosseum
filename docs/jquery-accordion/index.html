@@ -21,7 +21,7 @@
             var area05 = "close";
             var area06 = "close";
 
-            $("section#sec_03 h3.left-under-line.area01").bind('click', function(){
+            $("section#sec_03 h3.left-under-line.area01").click(function(){
                 $(this).next("section#sec_03 h3.left-under-line.area01 + ul.area-list").slideToggle();
                 if(area01 == "close"){
                 $("section#sec_03 h3.left-under-line.area01").addClass("active");
@@ -31,7 +31,7 @@
                     area01 = "close";
                 }
             });
-            $("section#sec_03 h3.left-under-line.area02").click(function(){
+            $("section#sec_03 h3.left-under-line.area02").bind('click', function(){
                 $(this).next("section#sec_03 h3.left-under-line.area02 + ul.area-list").slideToggle();
                 if(area02 == "close"){
                 $("section#sec_03 h3.left-under-line.area02").addClass("active");
