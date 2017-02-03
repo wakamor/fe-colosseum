@@ -21,7 +21,7 @@
             var area05 = "close";
             var area06 = "close";
 
-            $("section#sec_03 h3.left-under-line.area01").click(function(){
+            $("section#sec_03 h3.left-under-line.area01").on('click', function(){
                 $(this).next("section#sec_03 h3.left-under-line.area01 + ul.area-list").slideToggle();
                 if(area01 == "close"){
                 $("section#sec_03 h3.left-under-line.area01").addClass("active");
