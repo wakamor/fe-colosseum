@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+:root {
+    --main-color: #003894;
+    --base-color: #f1f1f1;
+}
+
 html {
     overflow-y: scroll;
 }
@@ -16,48 +21,37 @@ body {
     max-width: 960px;
 }
 
+.pl-header h1 {
+    color: var(--main-color);
+    font-size: 22px;
+}
+
 h2.left-line {
-    color: #003894;
+    color: var(--main-color);
     font-size: 20px;
     font-weight: bold;
     line-height: 1;
-    background: #f1f1f1;
-    padding: 15px 0;
-}
-
-h2.left-line:before {
-    content: ".";
-    float: left;
-    width: 6px;
-    margin-top: -15px;
-    margin-right: 10px;
-    color: #003894;
-    font-size: 20px;
-    line-height: 50px;
-    background: #003894;
+    padding: 15px 10px;
+    border-left: 4px solid var(--main-color);
+    background: var(--base-color);
 }
 
 h3.left-under-line {
 	position:relative;
-    color: #003894;
+    color: var(--main-color);
     font-size: 16px;
     line-height: 28px;
-    border-bottom: solid 1px #003894;
-    background-color: #fff;
+    border-bottom: solid 1px var(--main-color);
     cursor: pointer;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 1;
 }
 
 h3.left-under-line:before {
     content: " ";
     float: left;
-    width: 5px;
+    width: 3px;
     margin-right: 7px;
     height: 26px;
-    background-color: #003894;
+    background-color: var(--main-color);
 }
 
 /*エリアから探す*/
@@ -78,7 +72,7 @@ section#sec_03 h3.left-under-line span {
     height: 10px;
 }
 
-section#sec_03 h3.left-under-line span:before {
+section#sec_03 h3.left-under-line span::before {
     display: block;
     content: "";
     position: absolute;
@@ -88,10 +82,10 @@ section#sec_03 h3.left-under-line span:before {
     height: 0;
     margin-top: -5px;
     border: 5px solid transparent;
-    border-top: 8px solid #003894;
+    border-top: 8px solid var(--main-color);
 }
 
-section#sec_03 h3.left-under-line.active span:before {
+section#sec_03 h3.left-under-line.active span::before {
     display: block;
     content: "";
     position: absolute;
@@ -101,7 +95,7 @@ section#sec_03 h3.left-under-line.active span:before {
     height: 0;
     margin-top: -10px;
     border: 5px solid transparent;
-    border-bottom: 8px solid #003894;
+    border-bottom: 8px solid var(--main-color);
 }
 
 ul.area-list {
@@ -115,16 +109,12 @@ ul.area-list li {
 	overflow: hidden;
 	margin: 0 0 3%;
 	padding: 0 0 3%;
-	border-bottom: solid 1px #ccc;
+	border-bottom: solid 1px var(--base-color);
 	line-height: 1;
 }
 
 ul.area-list li:last-child {
     margin-bottom: 0;
-}
-
-ul.area-list li+.toTop {
-    margin-top: -3%;
 }
 
 ul.area-list li a {
@@ -147,7 +137,7 @@ ul.area-list li a .flt-riht_txtBox {
     box-sizing: border-box;
 }
 
-ul.area-list li a .flt-riht_txtBox:before {
+ul.area-list li a .flt-riht_txtBox::before {
     display: block;
     content: "";
     position: absolute;
@@ -158,10 +148,10 @@ ul.area-list li a .flt-riht_txtBox:before {
     width: 10px;
     height: 10px;
     margin-top: -5px;
-    background: #666;
+    background: var(--main-color);
 }
 
-ul.area-list li a .flt-riht_txtBox:after {
+ul.area-list li a .flt-riht_txtBox::after {
     display: block;
     content: "";
     position: absolute;
@@ -176,7 +166,7 @@ ul.area-list li a .flt-riht_txtBox:after {
 }
 
 ul.area-list li a .flt-riht_txtBox h3.areaName {
-    color: #003894;
+    color: var(--main-color);
     font-size: 16px;
     font-weight: bold;
     line-height: 1.5;
@@ -187,21 +177,4 @@ ul.area-list li a .flt-riht_txtBox .areaTxt {
     font-size: 13px;
     margin-top: 0;
     line-height: 1.5;
-}
-
-ul.area-list li a .label {
-    clear: both;
-    position: absolute;
-    width: 30%;
-    color: #fff;
-    font-size: 13px;
-    text-align: left;
-    line-height: 1.5;
-    background: rgba(0, 56, 148, 0.8);
-    padding: 5px 10px;
-    box-sizing: border-box;
-}
-
-ul.area-list li+.toTop {
-    margin-top: -3%;
 }
